@@ -15,8 +15,8 @@
             {{ task.body }}
         </div>
         <div class="card-footer text-center text-muted">
-           <a href="{% url 'task_edit' article.pk %}">Edit</a> |
-           <a href="{% url 'task_delete' article.pk %}">Delete</a>
+           <a href="{% url 'task_edit' task.pk %}">Edit</a> |
+           <a href="{% url 'task_delete' task.pk %}">Delete</a>
         </div>
     </div>
     <br />

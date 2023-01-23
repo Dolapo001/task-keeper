@@ -1,7 +1,18 @@
 from django.views.generic import ListView, DetailView
-from django.views.generic.edit import UpdateView, DeleteView
+from django.views.generic.edit import (
+    UpdateView, DeleteView, CreateView)
 from django.urls import reverse_lazy
 from .models import Task
+
+
+class TaskCreateView(CreateView):
+    model = Task
+    template_name = "new_task.html"
+    fields = (
+        "title",
+        "body",
+        "author",
+    )
 
 
 class TaskListView(ListView):
@@ -14,7 +25,7 @@ class TaskDetailView(DetailView): # new
     template_name = "task_detail.html"
 
 
-class ArticleUpdateView(UpdateView):
+class TaskUpdateView(UpdateView):
     model = Task
     fields = (
         "title",
