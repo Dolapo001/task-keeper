@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'tasks.apps.TasksConfig'
 ]
 
+TIME_ZONE = "America/New_York"
+
 AUTH_USER_MODEL = "accounts.CustomUser"
 
 MIDDLEWARE = [

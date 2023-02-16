@@ -5,6 +5,8 @@
 {% if user.is_authenticated %}
     Hi {{ user.username }}! You are {{ user.age }} years old.
     <p><a href="{% url 'logout' %}">Log Out</a></p>
+    See your tasks <p><a href="{% url 'tasks' %}">Tasks</a></p>
+
 {% else %}
     <p>You are not logged in</p>
     <a href="{% url 'login' %}">Log In</a> |

@@ -23,6 +23,8 @@ urlpatterns = [
     path("accounts", include("django.contrib.auth.urls")),
     path("tasks/", include("tasks.urls")),
     path("", include("pages.urls")),
+    path("tasks", TemplateView.as_view(template_name="home.html"),
+         name="home"),
     path("", TemplateView.as_view(template_name="home.html"),
          name="home"),
 
