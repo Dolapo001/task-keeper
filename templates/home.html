@@ -6,8 +6,6 @@
     Hi {{ user.username }}!
     {% if user.age %}
     You are {{ user.age }} years old.
-    {% else %}
-
     {% endif %}
     <p><a href="{% url 'logout' %}">Log Out</a></p>
     See your tasks <p><a href="{% url 'tasks' %}">Tasks</a></p>
