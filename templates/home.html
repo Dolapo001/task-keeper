@@ -3,10 +3,8 @@
 
 {% block content %}
 {% if user.is_authenticated %}
-    Hi {{ user.username }}! You are {{ user.age }} years old.
-    {% if request.user.age %}
-        <p>You are {{age}} years old</p>
-    {% endif %}
+    Hi {{ user.username }}!
+    `You are {{ user.age }} years old.
     <p><a href="{% url 'logout' %}">Log Out</a></p>
     See your tasks <p><a href="{% url 'tasks' %}">Tasks</a></p>
 
