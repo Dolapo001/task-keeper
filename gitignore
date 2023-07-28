@@ -1,6 +1,6 @@
 # Django-related
 *.pyc
-._pycache_/
+_pycache_/
 *.sqlite3
 
 
@@ -8,7 +8,6 @@
 # Virtual Environment
 venv/
 myenv/
-.venv/
 env/
 
 # Editor and IDE Files
@@ -51,4 +50,3 @@ local_settings.py
 db.sqlite3
 db.sqlite3-journal
 
-filters/
