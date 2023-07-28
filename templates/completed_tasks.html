@@ -1,0 +1,13 @@
+<!-- templates/completed_task_list.html -->
+{% extends "base.html" %}
+
+{% block title %}Completed Tasks{% endblock title %}
+
+{% block content %}
+    <h1>Completed Tasks</h1>
+    <ul>
+        {% for completed_task in task_list %}
+        <li>{{ completed_task.task.title }} - Completed on {{ completed_task.date_completed }}</li>
+        {% endfor %}
+    </ul>
+{% endblock content %}

@@ -3,22 +3,26 @@
 {% block title %}Tasks{% endblock title %}
 
 {% block content %}
-{% for task in task_list %}
-    <div class="card">
-        <div class="card-header">
-            <span class="font-weight-bold">{{ task.title }}</span>
-&middot;
-    <span class="text-muted">by {{ task.author }} |
-    {{ task.date }}</span>
+    {% for task in task_list %}
+        <div class="card">
+            <div class="card-header">
+                <span class="font-weight-bold">{{ task.title }}</span>
+                &middot;
+                <span class="text-muted">by {{ task.author }} | {{ task.date }}</span>
+                &middot;
+                <span class="text-muted">Category: {{ task.get_category_display }}</span>
+                &middot;
+                <span class="text-muted">Priority: {{ task.get_priority_display }}</span>
+            </div>
+            <div class="card-body">
+                {{ task.body }}
+            </div>
+            <div class="card-footer text-center text-muted">
+                <a href="{% url 'task_edit' task.pk %}">Edit</a> |
+                <a href="{% url 'task_delete' task.pk %}">Delete</a> |
+                <a href="{% url 'mark_completed' task.pk %}">Mark Completed</a>
+            </div>
         </div>
-        <div class="card-body">
-            {{ task.body }}
-        </div>
-        <div class="card-footer text-center text-muted">
-           <a href="{% url 'task_edit' task.pk %}">Edit</a> |
-           <a href="{% url 'task_delete' task.pk %}">Delete</a>
-        </div>
-    </div>
-    <br />
-{% endfor %}
+        <br>
+    {% endfor %}
 {% endblock content %}
