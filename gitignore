@@ -6,10 +6,10 @@
 
 
 # Virtual Environment
-venv/
-myenv/
 .venv/
-env/
+.myenv/
+.venv/
+.env/
 
 # Editor and IDE Files
 .vscode/
@@ -47,8 +47,8 @@ Thumbs.db
 
 
 # Django stuff:
-local_settings.py
-db.sqlite3
+.local_settings.py
+.db.sqlite3
 db.sqlite3-journal
 
 filters/
