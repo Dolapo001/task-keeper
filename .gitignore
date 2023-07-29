@@ -9,7 +9,7 @@ _pycache_/
 venv/
 myenv/
 env/
-
+.venv/
 # Editor and IDE Files
 .vscode/
 .idea/
